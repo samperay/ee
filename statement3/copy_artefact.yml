@@ -1,6 +1,6 @@
 ---
 - name: copy artifact
-  hosts: localhost
+  hosts: tomcat
   become: yes
 
   tasks:
@@ -8,7 +8,6 @@
       copy:
         src: /mnt/artefact/
         dest: /mnt/artefact/
-        remote_src: yes
         owner: root
         group: root
         mode: 0755
